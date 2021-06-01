@@ -1,7 +1,9 @@
 const btn = document.querySelector(".play");
+const jumpscare = document.querySelector("video");
+
+jumpscare.preload;
 
 btn.addEventListener("click", () => {
-  const jumpscare = document.querySelector("video");
   jumpscare.style.display = "block";
   jumpscare.src = "./media/video.mp4";
   jumpscare.autoplay = true;
