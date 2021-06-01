@@ -44,9 +44,9 @@ body {
   animation-delay: 7000ms;
   background: linear-gradient(45deg, #0077ee, #00aaee);
   color: #fff;
-  padding: 1em 1.3em;
+  padding: 0.7em 1.8em;
   border: none;
-  box-shadow: 0 0 30px #0088ee;
+  box-shadow: 0 0 10px #0088ee;
   border-radius: 5px;
   cursor: pointer;
 }
