@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  line-height: 1.6;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  color: #fff;
+}
+
+.intro * {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transform-origin: center;
+  text-align: center;
+  opacity: 0;
+  animation: motion 3500ms cubic-bezier(1, 0.73, 0, 0.01) forwards;
+}
+
+.intro h1,
+.intro h2 {
+  width: 95%;
+}
+
+.intro h1 {
+  font-size: clamp(0.55, 3.5rem, 5rem);
+}
+
+.intro h2 {
+  font-size: 2.3rem;
+  animation-delay: 3500ms;
+}
+
+.intro button {
+  font-size: 1.3rem;
+  animation: buttonanime 2500ms ease-in-out infinite;
+  animation-delay: 7000ms;
+  background: linear-gradient(45deg, #0077ee, #00aaee);
+  color: #fff;
+  padding: 1em 1.3em;
+  border: none;
+  box-shadow: 0 0 30px #0088ee;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@keyframes motion {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0);
+  }
+
+  25% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  75% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes buttonanime {
+  0% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.125);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+video {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1000;
+}
+
+.face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000;
+  display: none;
+}
+
+.face img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: auto;
+  max-width: 500px;
+}
+
+.copyright {
+  font-size: 2.4rem;
+  font-weight: 700;
+  animation: colorshift 1500ms linear infinite ;
+  text-align: center;
+}
+
+@keyframes colorshift {
+  0% {
+	color: #00aaee;
+  }
+  10% {
+	color: #ff0000;
+  }
+  20% {
+	color: #55eeee;
+  }
+  30% {
+	color: #2033ee;
+  }
+  40% {
+	color: #009a22;
+  }
+  50% {
+	color: #aaaa2e;
+  }
+  60% {
+	color: #245a3e;
+  }
+  70% {
+	color: #9a3cb3;
+  }
+  80% {
+	color: #92a9e3;
+  }
+  90% {
+	color: #0a0eae;
+  }
+}
+
+@media (max-width: 500px) {
+  :root {
+     font-size: 14px;
+  }
+}
